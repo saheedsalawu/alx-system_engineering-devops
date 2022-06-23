@@ -1,1 +1,1 @@
-My first directory
+my first directory in long format
