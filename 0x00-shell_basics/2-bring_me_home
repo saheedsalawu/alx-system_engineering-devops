@@ -1,1 +1,2 @@
-display content of current dir
+#!/bin/bash
+cd ~
