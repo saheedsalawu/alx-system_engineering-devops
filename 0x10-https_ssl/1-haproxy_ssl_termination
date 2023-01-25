@@ -37,12 +37,12 @@ frontend  meritaplus-frontend-http
         bind *:80
         mode http
 	http-request set-header X-Forwarded-Proto http
-        default_backend ehoneah-backend
+        default_backend meritaplus-backend
 
 frontend meritaplus-frontend-https
 	bind *:443 ssl crt /etc/haproxy/certs/www.meritaplus.tech.pem
 	http-request set-header X-Forwarded-Proto https
-	default_backend ehoneah-backend
+	default_backend meritaplus-backend
 
 backend meritaplus-backend
         balance roundrobin
