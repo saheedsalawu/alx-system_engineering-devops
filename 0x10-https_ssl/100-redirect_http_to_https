@@ -33,19 +33,18 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend  ehoneah-frontend-http
+frontend  meritaplus-frontend-http
         bind *:80
         mode http
 	http-request set-header X-Forwarded-Proto http
-        default_backend ehoneah-backend
+        default_backend meritaplus-backend
 
-frontend ehoneah-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.ehoneah.tech.pem
+frontend meritaplus-frontend-https
+	bind *:443 ssl crt /etc/haproxy/certs/www.meritaplus.tech.pem
 	http-request set-header X-Forwarded-Proto https
-	http-request redirect scheme https code 301 unless { ssl_fc }
-	default_backend ehoneah-backend
+	default_backend meritaplus-backend
 
-backend ehoneah-backend
+backend meritaplus-backend
         balance roundrobin
-        server 63210-web-01 100.25.19.204:80 check
-        server 63210-web-02 54.157.159.85:80 check
+        server 84603-web-01 3.84.168.185 check
+        server 84603-web-02 100.26.57.252 check
