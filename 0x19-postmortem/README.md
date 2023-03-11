@@ -21,6 +21,6 @@ after fixing the error we pushed back the changes and restarted the servers at 1
 
 # *Corrective and preventative measures*
 Inoder to prevent the occurenece of similar problems from happening again there is need to:
--Create an automated test pipeline for every update push
--Add a monitoring software to our servers which will monitor lot of things and one of them Network Traffic resquests and responses and configure it to make an lert to the teams when too much non desired responses were sent like 404
--Create a tests for every new update and the teams shouuld not push until those tests pass
+* Create an automated test pipeline for every update push
+* Add a monitoring software to our servers which will monitor lot of things and one of them Network Traffic resquests and responses and configure it to make an lert to the teams when too much non desired responses were sent like 404
+* Create a tests for every new update and the teams shouuld not push until those tests pass.
