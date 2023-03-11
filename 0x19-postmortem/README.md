@@ -4,16 +4,16 @@
 8/03/2022 From 11:15 AM to 12:00 AM UTC+1 all requests for our homepage to the servers got a 404 error response
 
 # *Time Line*
--11:10 AM : Updates push
--11:15 AM : Observing the problem
--11:15 AM : Informing the front end and backend handlers
--11:20 AM : Rollback change executed
--11:24 AM : Restarting server begin
--11:27 AM : Traffic fully back online (100%)
--11:30 AM : Began debugging and push further with the problem
--11:50 AM : Issue fixed and changes pushed
--11:55 AM : Began restart of the server
--11:00 AM : Traffic back 100% online plus the new updates
+* 11:10 AM : Updates push
+* 11:15 AM : Observing the problem
+* 11:15 AM : Informing the front end and backend handlers
+* 11:20 AM : Rollback change executed
+* 11:24 AM : Restarting server begin
+* 11:27 AM : Traffic fully back online (100%)
+* 11:30 AM : Began debugging and push further with the problem
+* 11:50 AM : Issue fixed and changes pushed
+* 11:55 AM : Began restart of the server
+* 11:00 AM : Traffic back 100% online plus the new updates
 
 # *Root cause and resolution*
 After rolling back changes we knew that the changes were made by the front end team so we took the broken changes and run them on a test server which replicated same problem, our server uses apache2 and apache2 error logs didn't give enought infomation about the problem so we traced the apache2 process using strace and when a request is sent strace tool catchs a lot of error and after some scaning fo these errors we found the error wich is a typo in page file extention
