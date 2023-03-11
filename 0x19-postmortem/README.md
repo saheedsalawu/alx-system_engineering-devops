@@ -1,5 +1,8 @@
 # *0x19-postmortem*
 
+![BUG FIXED](https://user-images.githubusercontent.com/106780350/224470009-b0aeca50-3ae9-4c38-b96a-919860ab94f8.jpg)
+
+
 # *Issue Summary*
 8/03/2022 From 11:15 AM to 12:00 AM UTC+1 all requests for our homepage to the servers got a 404 error response
 
